@@ -1,0 +1,25 @@
+ALGORITHM checkpointAlgo
+VAR
+        cptChar : INTEGER;
+        cptMots : INTEGER;
+        cptVoy : INTEGER;
+        c : CHAR;
+        cptChar := 0;
+        cptMots := 0;
+        cptVoy := 0;
+        Write(c);
+        Read(c);
+BEGIN
+        WHILE (c <> '.') DO
+                cptChar := cptChar + 1;
+                IF (c = ' ') THEN
+                        cptMots = cptMots +1;
+                END_IF
+                IF (c ='a' OR c='o' OR c='i' OR c='e' OR c='u' OR c='y') THEN
+                        cptVoy := cptVoy +1;
+                END_IF
+        END_WHILE
+        Write(cptChar);
+        Write(cptMots);
+        Write(cptVoy);
+END
